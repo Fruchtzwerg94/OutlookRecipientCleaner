@@ -11,7 +11,7 @@ An Outlook Add-In to clean up duplicated Outlook recipients.
 ## Features
 Ever wondered how to remove duplicated participants out of your conversation in Outlook? Especially for big conversations this really can be a pain.
 What sounds like a must have out of the box Outlook feature simply was not payed attention by the Microsoft developers.
-Although are some *dirty* workarounds like copying the recipients to Excel to remove the duplicates or payed Add-Ins this is not really satisfying.
+Although are some *dirty* workarounds like copying the recipients to Excel to remove the duplicates or payed Add-Ins, this seems not be really satisfying.
 
 This Add-In comes up with the solution: It removes all recipients of the *To*, *CC* and *BCC* fields by their address to leave only unique entries.
 
@@ -23,7 +23,7 @@ Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientsC
 For more details see Microsofts documentation on how to [view, manage, and install add-ins in Office programs](https://support.microsoft.com/en-us/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
 
 ### Compatibility
-This plugin requires at least *Outlook 2013* it was developed and tested with *Outlook 365 (Version 2202) 32 Bit* 
+This Add-In requires at least *Outlook 2013* it was developed and tested with *Outlook 365 (Version 2202) 32 Bit*.
 
 ## Usage
 The Add-In will show up in Outlooks Ribbon Bar tab *Add-Ins*. Klicking the *Clean* (<img src="OutlookRecipientCleaner/OutlookRecipientCleaner/Resources/Clean.png" width="30">) button does all the magic.
