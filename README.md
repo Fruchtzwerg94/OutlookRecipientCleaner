@@ -18,8 +18,11 @@ This Add-In comes up with the solution: It removes all recipients of the *To*, *
 You can find the latest and all other changes in the [changelog](CHANGELOG.md).
 
 ## Installation
-Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases) and place its files in a persistant directory like *C:\ProgramData\Schmidt\OutlookRecipientCleaner*. Open Outlook and navigate to *File* --> *Options* --> *Add-Ins* where you are able to manage and add COM Add-Ins by clicking the corresponding _Go..._ button. After adding the Add-In you are ready to go.
-For more details see Microsofts documentation on how to [view, manage, and install add-ins in Office programs](https://support.microsoft.com/en-us/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
+Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases) and install it by executing the *setup.exe*. Restart Outlook and you are ready to go.
+
+In case you want to uninstall the plugin again, you can simply do this in Windows *Settings* --> *Apps* --> *Apps & features* by removing *OutlookRecipientCleaner*.
+
+Note that you can manage Outlook Add-Ins by navigating to *File* --> *Options* --> *Add-Ins*. For more details see Microsofts documentation on how to [view, manage, and install add-ins in Office programs](https://support.microsoft.com/en-us/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
 
 ### Compatibility
 This Add-In requires at least *Outlook 2013* it was developed and tested with *Outlook 365 (Version 2202) 32 Bit*.

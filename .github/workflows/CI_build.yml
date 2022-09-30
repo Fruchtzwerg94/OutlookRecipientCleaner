@@ -29,7 +29,7 @@ jobs:
 
     - name: MSBuild of solution
       working-directory: OutlookRecipientCleaner/
-      run: msbuild OutlookRecipientCleaner.sln /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}" /m /verbosity:minimal
+      run: msbuild OutlookRecipientCleaner.sln /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}" /m /verbosity:minimal /t:Publish
 
     - name: Archive artifacts for ${{ matrix.build_platform }}
       if: matrix.build_configuration == 'Release'
