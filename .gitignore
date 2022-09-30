@@ -1,0 +1,7 @@
+*.user
+*.csproj.bak
+
+.vs/
+packages/
+obj/
+bin/

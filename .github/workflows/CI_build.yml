@@ -1,0 +1,40 @@
+name: Continuous Integration
+
+on: [push, pull_request,workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: windows-2022
+    strategy:
+      max-parallel: 2
+      matrix:
+        build_configuration: [AnyCPU]
+        build_platform: [x64, x86]
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v1
+
+    - name: Nuget restore solution
+      working-directory: OutlookRecipientCleaner/
+      run: nuget restore OutlookRecipientCleaner.sln
+
+    - name: MSBuild of solution
+      working-directory: OutlookRecipientCleaner/
+      run: msbuild OutlookRecipientCleaner.sln /p:configuration="${{ matrix.build_configuration }}" /p:platform="${{ matrix.build_platform }}" /m /verbosity:minimal
+
+    - name: Archive artifacts for ${{ matrix.build_platform }}
+      if: matrix.build_configuration == 'Release'
+      uses: actions/upload-artifact@v3
+      with:
+          name: OutlookRecipientCleaner_${{ matrix.build_platform }}
+          path: |
+              OutlookRecipientCleaner/OutlookRecipientCleaner/bin/${{ matrix.build_configuration }}-${{ matrix.build_platform }}/
