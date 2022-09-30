@@ -1,8 +1,8 @@
-# Outlook Recipients Cleaner
-[![License](https://img.shields.io/github/license/Fruchtzwerg94/OutlookRecipientsCleaner)](LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/Fruchtzwerg94/OutlookRecipientsCleaner/total)](https://tooomm.github.io/github-release-stats/?username=Fruchtzwerg94&repository=OutlookRecipientsCleaner)
-[![Release](https://img.shields.io/github/v/release/Fruchtzwerg94/OutlookRecipientsCleaner)](https://github.com/Fruchtzwerg94/OutlookRecipientsCleaner/releases)
-[![Build status](https://github.com/Fruchtzwerg94/OutlookRecipientsCleaner/actions/workflows/CI_build.yml/badge.svg?branch=master)](https://github.com/Fruchtzwerg94/OutlookRecipientsCleaner/actions/workflows/CI_build.yml)
+# Outlook Recipient Cleaner
+[![License](https://img.shields.io/github/license/Fruchtzwerg94/OutlookRecipientCleaner)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Fruchtzwerg94/OutlookRecipientCleaner/total)](https://tooomm.github.io/github-release-stats/?username=Fruchtzwerg94&repository=OutlookRecipientsCleaner)
+[![Release](https://img.shields.io/github/v/release/Fruchtzwerg94/OutlookRecipientCleaner)](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases)
+[![Build status](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/actions/workflows/CI_build.yml/badge.svg?branch=master)](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/actions/workflows/CI_build.yml)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/insanitydesign)
 
 An Outlook Add-In to clean up duplicated Outlook recipients.
@@ -19,7 +19,7 @@ This Add-In comes up with the solution: It removes all recipients of the *To*, *
 You can find the latest and all other changes in the [changelog](CHANGELOG.md).
 
 ## Installation
-Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientsCleaner/releases) and place its files in a persistant directory like *C:\ProgramData\Schmidt\OutlookRecipientCleaner*. Open Outlook and navigate to *File* --> *Options* --> *Add-Ins* where you are able to manage and add COM Add-Ins by clicking the corresponding _Go..._ button. After adding the plugin you are ready to go.
+Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases) and place its files in a persistant directory like *C:\ProgramData\Schmidt\OutlookRecipientCleaner*. Open Outlook and navigate to *File* --> *Options* --> *Add-Ins* where you are able to manage and add COM Add-Ins by clicking the corresponding _Go..._ button. After adding the plugin you are ready to go.
 For more details see Microsofts documentation on how to [view, manage, and install add-ins in Office programs](https://support.microsoft.com/en-us/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
 
 ### Compatibility
@@ -33,7 +33,7 @@ It removes all duplicate recipients by their address. Recipients of the *To* fie
 ![After Outlook Recipient Cleaner](doc/AfterOutlookRecipientCleaner.png)
 
 ## License and credits
-Outlook Recipients Cleaner is released under the [MIT License](LICENSE).
+Outlook Recipient Cleaner is released under the [MIT License](LICENSE).
 
 This Outlook Add-In integrates multiple other libraries and sources. Credits and thanks to all the developers working on these great projects:
 * The plugin uses the [LoadingCircle](https://www.codeproject.com/articles/14841/how-to-write-a-loading-circle-animation-in-net) by Martin Gagne provided under the Code Project Open License.
