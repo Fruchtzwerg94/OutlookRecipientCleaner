@@ -108,6 +108,7 @@ namespace OutlookRecipientCleaner.Forms
         private void LinkLabel_Mail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel_Mail.LinkVisited = true;
+            Close();
             Process.Start($"mailto:phi_dev@gmx.de?subject={ThisAddIn.ADD_IN_NAME}");
         }
 
