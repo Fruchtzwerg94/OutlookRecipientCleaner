@@ -10,9 +10,9 @@ An Outlook Add-In to clean up duplicated Outlook recipients.
 ## Features
 Ever wondered how to remove duplicated participants out of your conversation in Outlook? Especially for big conversations this really can be a pain.
 What sounds like a must have out of the box Outlook feature simply was not payed attention by the Microsoft developers.
-Although are some *dirty* workarounds like copying the recipients to Excel to remove the duplicates or payed Add-Ins, this seems not be really satisfying.
+Although there are some *dirty* workarounds like copying the recipients to Excel to remove the duplicates or payed Add-Ins, this seems not to be really satisfying.
 
-This Add-In comes up with the solution: It removes all recipients of the *To*, *CC* and *BCC* fields by their address to leave only unique entries.
+This Add-In comes up with the solution: It removes all duplicated recipients of the *To*, *CC* and *BCC* fields by their address to leave only unique entries.
 
 ## Latest changes
 You can find the latest and all other changes in the [changelog](CHANGELOG.md).
@@ -20,16 +20,16 @@ You can find the latest and all other changes in the [changelog](CHANGELOG.md).
 ## Installation
 Download a [release version](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases) and install it by executing the *setup.exe*. Restart Outlook and you are ready to go.
 
-In case you want to uninstall the plugin again, you can simply do this in Windows *Settings* --> *Apps* --> *Apps & features* by removing *OutlookRecipientCleaner*.
+In case you want to uninstall the plugin, navigate to Windows *Settings* --> *Apps* --> *Apps & features* and remove *OutlookRecipientCleaner*.
 
 Note that you can manage Outlook Add-Ins by navigating to *File* --> *Options* --> *Add-Ins*. For more details see Microsofts documentation on how to [view, manage, and install add-ins in Office programs](https://support.microsoft.com/en-us/office/view-manage-and-install-add-ins-in-office-programs-16278816-1948-4028-91e5-76dca5380f8d).
 
 ### Compatibility
-This Add-In requires at least *Outlook 2013* it was developed and tested with *Outlook 365 (Version 2202) 32 Bit*.
+This Add-In requires at least *Outlook 2013*, it was developed and tested with *Outlook 365 (Version 2202) 32 Bit*.
 
 ## Usage
-The Add-In will show up in Outlooks Ribbon Bar tab *Add-Ins*. Clicking the *Clean* (<img src="OutlookRecipientCleaner/OutlookRecipientCleaner/Resources/Clean.png" width="30">) button does all the magic.
-It removes all duplicate recipients by their address. Recipients of the *To* field are priorized over recipients of the *CC* and *BCC* fields.
+The Add-In will show up in Outlooks Ribbon Bar tab *Add-Ins*. Clicking the *Clean* (<img src="OutlookRecipientCleaner/OutlookRecipientCleaner/Resources/Clean.png" width="25">) button does all the magic.
+It removes all duplicated recipients by their address. Recipients of the *To* field are priorized over recipients of the *CC* and *BCC* fields.
 
 ![Before Outlook Recipient Cleaner](doc/BeforeOutlookRecipientCleaner.png)
 ![After Outlook Recipient Cleaner](doc/AfterOutlookRecipientCleaner.png)

@@ -37,4 +37,4 @@ jobs:
       with:
           name: OutlookRecipientCleaner_${{ matrix.build_platform }}
           path: |
-              OutlookRecipientCleaner/OutlookRecipientCleaner/bin/${{ matrix.build_configuration }}-${{ matrix.build_platform }}/
+              OutlookRecipientCleaner/OutlookRecipientCleaner/bin/${{ matrix.build_configuration }}-${{ matrix.build_platform }}/app.publish/

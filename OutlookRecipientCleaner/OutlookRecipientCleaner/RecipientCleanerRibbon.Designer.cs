@@ -71,7 +71,9 @@
             // 
             this.button_About.Label = "About";
             this.button_About.Name = "button_About";
+            this.button_About.ScreenTip = "About this Add-In";
             this.button_About.ShowImage = true;
+            this.button_About.SuperTip = "When all else fails … reboot (P.S.)";
             this.button_About.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Button_About_Click);
             // 
             // RecipientCleanerRibbon
