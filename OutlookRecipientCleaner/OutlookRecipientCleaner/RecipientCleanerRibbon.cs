@@ -7,6 +7,7 @@ using Microsoft.Office.Interop.Outlook;
 using Microsoft.Office.Tools.Ribbon;
 
 using OutlookRecipientCleaner.Forms;
+using OutlookRecipientCleaner.Helpers;
 
 namespace OutlookRecipientCleaner
 {
@@ -21,35 +22,43 @@ namespace OutlookRecipientCleaner
         {
             Debug.WriteLine("Start cleaning recipients", nameof(RecipientCleanerRibbon));
 
-            Inspector inspector = Globals.ThisAddIn.Application.ActiveInspector();
-            if (inspector?.CurrentItem is MailItem mail)
+            try
             {
-                mail.Recipients.ResolveAll();
-
-                //Order recipents by OlMailRecipientType, which allows to remove by priority: To --> CC --> BCC
-                IEnumerable<Recipient> recipents = mail.Recipients.Cast<Recipient>().OrderBy(r => r.Type);
-
-                List<Recipient> recipientsToRemove = new List<Recipient>();
-                IEnumerable<IGrouping<string, Recipient>> groupedRecipients = recipents.GroupBy(g => g.Address);
-                IEnumerable<IGrouping<string, Recipient>> nonUniqueRecipients = groupedRecipients.Where(gr => gr.Count() > 1);
-                foreach (IGrouping<string, Recipient> nonUniqueRecipient in nonUniqueRecipients)
+                Inspector inspector = Globals.ThisAddIn.Application.ActiveInspector();
+                if (inspector?.CurrentItem is MailItem mail)
                 {
-                    //Remove all non unique recipients, keep the first one
-                    recipientsToRemove.AddRange(nonUniqueRecipient.Skip(1));
+                    mail.Recipients.ResolveAll();
+
+                    //Order recipents by OlMailRecipientType, which allows to remove by priority: To --> CC --> BCC
+                    IEnumerable<Recipient> recipients = mail.Recipients.Cast<Recipient>().OrderBy(r => r.Type);
+
+                    List<Recipient> recipientsToRemove = new List<Recipient>();
+                    IEnumerable<IGrouping<string, Recipient>> groupedRecipients = recipients.GroupBy(g => g.GetSmtpAddress());
+                    IEnumerable<IGrouping<string, Recipient>> nonUniqueRecipients = groupedRecipients.Where(gr => gr.Count() > 1);
+                    foreach (IGrouping<string, Recipient> nonUniqueRecipient in nonUniqueRecipients)
+                    {
+                        //Remove all non unique recipients, keep the first one
+                        recipientsToRemove.AddRange(nonUniqueRecipient.Skip(1));
+                    }
+
+                    //Remove non unique recipients
+                    Debug.WriteLine($"Removing {recipientsToRemove.Count} recipients", nameof(RecipientCleanerRibbon));
+                    foreach (Recipient recipientToRemove in recipientsToRemove)
+                    {
+                        Debug.WriteLine($"Removing {recipientToRemove.Name}: {recipientToRemove.GetSmtpAddress()}", nameof(RecipientCleanerRibbon));
+                        mail.Recipients.Remove(recipientToRemove.Index);
+                    }
                 }
-
-                //Remove non unique recipients
-                Debug.WriteLine($"Removing {recipientsToRemove.Count} recipients", nameof(RecipientCleanerRibbon));
-                foreach (Recipient recipientToRemove in recipientsToRemove)
+                else
                 {
-                    Debug.WriteLine($"Removing {recipientToRemove.Name}: {recipientToRemove.Address}", nameof(RecipientCleanerRibbon));
-                    mail.Recipients.Remove(recipientToRemove.Index);
+                    Debug.WriteLine("Failed to get mail item", nameof(RecipientCleanerRibbon));
+                    MessageBox.Show("Failed to access a mail", "Failed to clean recipients", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (System.Exception ex)
             {
-                Debug.WriteLine("Failed to get mail item", nameof(RecipientCleanerRibbon));
-                MessageBox.Show("Failed to access a mail", "Failed to clean participants", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine("Failed to clean: " + ex);
+                MessageBox.Show("Failed to clean recipients: " + ex);
             }
 
             Debug.WriteLine("Finished cleaning recipients", nameof(RecipientCleanerRibbon));
