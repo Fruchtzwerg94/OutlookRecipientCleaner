@@ -3,7 +3,7 @@
 [![Downloads](https://img.shields.io/github/downloads/Fruchtzwerg94/OutlookRecipientCleaner/total)](https://tooomm.github.io/github-release-stats/?username=Fruchtzwerg94&repository=OutlookRecipientCleaner)
 [![Release](https://img.shields.io/github/v/release/Fruchtzwerg94/OutlookRecipientCleaner)](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/releases)
 [![Build status](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/actions/workflows/CI_build.yml/badge.svg?branch=master)](https://github.com/Fruchtzwerg94/OutlookRecipientCleaner/actions/workflows/CI_build.yml)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/insanitydesign)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/SchmidtPh)
 
 An Outlook Add-In to clean up duplicated Outlook recipients.
 
