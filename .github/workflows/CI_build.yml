@@ -33,7 +33,7 @@ jobs:
 
     - name: Archive artifacts for ${{ matrix.build_platform }}
       if: matrix.build_configuration == 'Release'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: OutlookRecipientCleaner_${{ matrix.build_platform }}
           path: |
