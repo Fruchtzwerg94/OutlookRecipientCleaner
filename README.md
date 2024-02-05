@@ -35,7 +35,7 @@ It removes all duplicated recipients by their address. Recipients of the *To* fi
 ![After Outlook Recipient Cleaner](doc/AfterOutlookRecipientCleaner.png)
 
 ## License and credits
-Outlook Recipient Cleaner is released under the [MIT License](LICENSE).
+Outlook Recipient Cleaner is released under the [MIT License](LICENSE). This means, you can do with it whatever you want as long as you include the original copyright and license notice in any copy of the software.
 
 This Outlook Add-In integrates multiple other libraries and sources. Credits and thanks to all the developers working on these great projects:
 * The Add-In uses the [LoadingCircle](https://www.codeproject.com/articles/14841/how-to-write-a-loading-circle-animation-in-net) by Martin Gagne provided under the Code Project Open License.
