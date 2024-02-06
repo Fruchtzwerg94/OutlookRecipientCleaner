@@ -19,7 +19,7 @@ namespace OutlookRecipientCleaner.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -66,9 +66,7 @@ namespace OutlookRecipientCleaner.Properties {
         ///{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
         ///\pard\sa200\sl276\slmult1\b\f0\fs24\lang7 License and credits\par
         ///
-        ///\pard\sa200\sl240\slmult1\b0\fs22 Outlook Recipient Cleaner is released under the MIT License.\par
-        ///
-        ///\pard\sl240\slmult1 This Outlook Add-In integrates multiple other libraries and sources. Credits [rest of string was truncated]&quot;;.
+        ///\pard\sa200\sl240\slmult1\b0\fs22 Outlook Recipient Cleaner is released under the MIT License.  This means, you can do with it whatever you want as long as you include the original copyright and lic [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AboutText {
             get {
